@@ -86,6 +86,8 @@ La clave forranea "ID_Productos" se selecciona como identificador para relaciona
 Las tablas se relacionan mediante el uso de claves primarias y claves foráneas. Por ejemplo:
 
 La tabla "compras_productos" tiene claves foráneas "ID_Compras" y "ID_Productos" que se relacionan con las tablas "Compras" y "Productos" respectivamente, para indicar el producto y la operacion de compras registrada.
+
 La tabla "ventas_productos" tiene claves foráneas "ID_Ventas" y "ID_Productos" que se relacionan con las tablas "Ventas" y "Productos" respectivamente, para indicar el producto y la operacion de venta registrada.
+
 La tabla "Ventas" tiene una clave foránea "ID_Cliente" que se relaciona con la tabla "Clientes" para indicarnos el cliente que esta comprandonos
 
