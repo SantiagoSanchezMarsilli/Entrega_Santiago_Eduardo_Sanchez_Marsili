@@ -26,3 +26,66 @@ Conclusión de esta primera entrega:
 
 "Este proyecto representa el primer paso en la construcción de una infraestructura tecnológica sólida para una distribuidora de hardware con visión estratégica. Si bien la base de datos se encuentra en una etapa inicial de desarrollo, ya se delinean los pilares fundamentales del modelo de negocio: atención personalizada, excelencia en producto y eficiencia operativa. La propuesta busca sentar las bases para un crecimiento ordenado, escalable y diferenciado, con capacidad de adaptación a las necesidades del mercado. Esta entrega inicial refleja el compromiso con una evolución constante, donde cada componente técnico responde a una lógica comercial clara y a una experiencia de usuario cuidada desde el origen."
 
+
+Descripciond e la base de datos
+
+La base de datso "cuchuflito_sa" es un esquea que almacena datos de una firma dedicada a la venta de hardware informatico.
+Ahora procederemos a describiar las tablas.
+
+
+Tabla Clientes
+
+Clave primaria: ID_Cliente (identificador unico de los clientes)
+No posee clave forranea.
+La clave primaria "ID_Cliente" se seleccionó como identificador único para cada cliente, sea este eventual o habitual, garantizando la unicidad de cada registro.
+
+Tabla Proveedores
+
+Clave primaria: ID_Provedor (identificador unico de los proveedores)
+No posee clave forranea.
+La clave primaria "ID_Proveedor" se seleccionó como identificador único para cada proveedor, sea este eventual o habitual, garantizando la unicidad de cada registro. 
+
+
+Tabla Productos
+
+Clave primaria: ID_Producto (identificador unico de los clientes)
+No posee clave forranea.
+La clave primaria "ID_Producto" se seleccionó como identificador único para cada producto que comercializamos, sea este eventual o habitual, garantizando la unicidad de cada registro.
+
+
+Tabla Compras
+
+Clave primaria: ID_Compras (identificador unico de los clientes)
+Se definio como clave forranea: ID_Proveedor.
+La clave primaria "ID_Compras" se seleccionó como identificador único para cada compras, garantizando la unicidad de cada registro.
+La clave forranea "ID_Proveedor" se selecciona como identificador para relacionarse con la tabla Proveedores, para que mabas tablas puedan interractuar.
+
+Tabla Ventas
+
+Clave primaria: ID_Ventas (identificador unico de los clientes)
+Se definio como clave forranea: ID_Cliente.
+La clave primaria "ID_Ventas" se seleccionó como identificador único para cada venta, garantizando la unicidad de cada registro.
+La clave forranea "ID_Cliente" se selecciona como identificador para relacionarse con la tabla Cliente, para que mabas tablas puedan interractuar.
+
+
+Tabla compras_productos
+
+Clave primaria: No se asigna.
+Se definen como claves forraneas "ID_Compras" y "ID_Productos"
+La clave forranea "ID_Compras" se selecciona como identificador para relacionarse con la tabla compras, para que mabas tablas puedan interractuar.
+La clave forranea "ID_Productos" se selecciona como identificador para relacionarse con la tabla productos, para que mabas tablas puedan interractuar.
+
+Tabla ventas_productos
+
+Clave primaria: No se asigna.
+Se definen como claves forraneas "ID_Ventas" y "ID_Productos"
+La clave forranea "ID_Ventas" se selecciona como identificador para relacionarse con la tabla ventas, para que mabas tablas puedan interractuar.
+La clave forranea "ID_Productos" se selecciona como identificador para relacionarse con la tabla productos, para que mabas tablas puedan interractuar.
+
+
+Las tablas se relacionan mediante el uso de claves primarias y claves foráneas. Por ejemplo:
+
+La tabla "compras_productos" tiene claves foráneas "ID_Compras" y "ID_Productos" que se relacionan con las tablas "Compras" y "Productos" respectivamente, para indicar el producto y la operacion de compras registrada.
+La tabla "ventas_productos" tiene claves foráneas "ID_Ventas" y "ID_Productos" que se relacionan con las tablas "Ventas" y "Productos" respectivamente, para indicar el producto y la operacion de venta registrada.
+La tabla "Ventas" tiene una clave foránea "ID_Cliente" que se relaciona con la tabla "Clientes" para indicarnos el cliente que esta comprandonos
+
