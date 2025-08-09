@@ -41,10 +41,15 @@ La clave primaria "ID_Cliente" se seleccionó como identificador único para cad
 
 Tabla Proveedores
 
+Clave primaria: ID_Medio (identificador unico de los proveedores)
+No posee clave forranea.
+La clave primaria "ID_Medio" se seleccionó como identificador único para cada vbenta de productos, sea este eventual o habitual, garantizando la unicidad de cada registro. 
+
+Tabla Medios de Pagos
+
 Clave primaria: ID_Provedor (identificador unico de los proveedores)
 No posee clave forranea.
-La clave primaria "ID_Proveedor" se seleccionó como identificador único para cada proveedor, sea este eventual o habitual, garantizando la unicidad de cada registro. 
-
+La clave primaria "ID_Proveedor" se seleccionó como identificador único para cada venta, sea este eventual o habitual, garantizando la unicidad de cada registro. 
 
 Tabla Productos
 
@@ -58,29 +63,29 @@ Tabla Compras
 Clave primaria: ID_Compras (identificador unico de los clientes)
 Se definio como clave forranea: ID_Proveedor.
 La clave primaria "ID_Compras" se seleccionó como identificador único para cada compras, garantizando la unicidad de cada registro.
-La clave forranea "ID_Proveedor" se selecciona como identificador para relacionarse con la tabla Proveedores, para que mabas tablas puedan interractuar.
+La clave forranea "ID_Proveedor" se selecciona como identificador para relacionarse con la tabla Proveedores, para que amabas tablas puedan interractuar.
 
 Tabla Ventas
 
 Clave primaria: ID_Ventas (identificador unico de los clientes)
-Se definio como clave forranea: ID_Cliente.
+Se definio como clave forranea: ID_Cliente y Medio_de_Pago
 La clave primaria "ID_Ventas" se seleccionó como identificador único para cada venta, garantizando la unicidad de cada registro.
-La clave forranea "ID_Cliente" se selecciona como identificador para relacionarse con la tabla Cliente, para que mabas tablas puedan interractuar.
-
+La clave forranea "ID_Cliente" se selecciona como identificador para relacionarse con la tabla Cliente, para que amabas tablas puedan interractuar.
+La clave forranea "Medio_de_Pago" se selecciona como identificador para relacionarse con la de medios de pago, para que amabas tablas puedan interractuar.
 
 Tabla compras_productos
 
 Clave primaria: No se asigna.
 Se definen como claves forraneas "ID_Compras" y "ID_Productos"
 La clave forranea "ID_Compras" se selecciona como identificador para relacionarse con la tabla compras, para que mabas tablas puedan interractuar.
-La clave forranea "ID_Productos" se selecciona como identificador para relacionarse con la tabla productos, para que mabas tablas puedan interractuar.
+La clave forranea "ID_Productos" se selecciona como identificador para relacionarse con la tabla productos, para que amabas tablas puedan interractuar.
 
 Tabla ventas_productos
 
 Clave primaria: No se asigna.
 Se definen como claves forraneas "ID_Ventas" y "ID_Productos"
 La clave forranea "ID_Ventas" se selecciona como identificador para relacionarse con la tabla ventas, para que mabas tablas puedan interractuar.
-La clave forranea "ID_Productos" se selecciona como identificador para relacionarse con la tabla productos, para que mabas tablas puedan interractuar.
+La clave forranea "ID_Productos" se selecciona como identificador para relacionarse con la tabla productos, para que amabas tablas puedan interractuar.
 
 
 Las tablas se relacionan mediante el uso de claves primarias y claves foráneas. Por ejemplo:
