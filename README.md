@@ -96,3 +96,38 @@ La tabla "ventas_productos" tiene claves foráneas "ID_Ventas" y "ID_Productos" 
 
 La tabla "Ventas" tiene una clave foránea "ID_Cliente" que se relaciona con la tabla "Clientes" para indicarnos el cliente que esta comprandonos
 
+Listado de Vistas: (inicial)
+
+Vista vista_ventas_detalladas
+
+Descripción:
+Esta vista consolida de manera estructurada y precisa cada venta registrada en nuestra base de datos. Presenta información esencial como la fecha de la operación, los productos adquiridos, los datos del cliente y el medio de pago utilizado. Su construcción refleja buenas prácticas en el modelado relacional, facilitando tanto el análisis comercial como la enseñanza de conceptos clave en gestión de datos y trazabilidad de transacciones.
+Objetivo:Permitir una identificación rápida y precisa de los elementos clave de cada operación de venta: quién fue el cliente, qué productos adquirió, cuántas unidades compró, en qué fecha se realizó la transacción, a qué precio se vendieron los productos y cuál fue el medio de pago utilizado. Esta vista no solo optimiza el análisis comercial, sino que también ejemplifica cómo estructurar consultas orientadas a la trazabilidad, la toma de decisiones y la enseñanza de modelos de gestión relacional.
+Tablas que componen la vista:
+- ventas: permite identificar la operación realizada.
+- ventas_producto: detalla los productos vendidos en cada operación.
+- producto: permite extraer el nombre del producto.
+- clientes: contiene los datos del cliente, como nombre, apellido o si se trata de un cliente eventual.
+- medio_de_pago: muestra cómo se efectuó el pago.
+
+Vista vista_compras_detalladas
+
+Descripción:
+Esta vista permite visualizar de manera estructurada y exhaustiva cada compra registrada en nuestra base de datos. Presenta información clave como la fecha de la operación, los productos adquiridos, los datos del proveedor, la forma de contacto y otros detalles relevantes. Su diseño busca no solo facilitar el análisis técnico, sino también ofrecer una herramienta didáctica que ejemplifica cómo integrar múltiples fuentes de información en un modelo relacional coherente y funcional.
+Objetivo:
+Brindar una visualización clara y eficiente de cada operación de compra, permitiendo identificar con rapidez qué productos se adquirieron, en qué fecha, en qué cantidad, a qué precio y a qué proveedor fueron comprados. Esta vista facilita el seguimiento de decisiones comerciales y ejemplifica cómo estructurar consultas orientadas al análisis estratégico dentro de un entorno relacional.
+Tablas que componen la vista:
+- compras: identificamos la operación.
+- compra_producto: identifocamos que es lo que compramos, que cantidad y que precio tenia por unidad.
+- proveedores: identificamos a quien le compramos y un dato de contacto.
+
+Vista vista_productos_agrupado
+
+Descripción:
+Esta vista permite visualizar los productos disponibles en nuestro sistema, incluyendo su descripción, costo y nivel de existencia actual. La información se presenta de forma independiente del proveedor, ya que un mismo producto puede estar asociado a múltiples proveedores. Este diseño facilita el análisis de stock y costos desde una perspectiva centralizada, ejemplificando cómo abstraer entidades clave en un modelo relacional sin perder flexibilidad operativa
+Objetivo:
+Centralizar la información de productos disponibles, permitiendo conocer su descripción, existencia y costo, independientemente del proveedor asociado.
+Tabla que la compone:
+- producto: de esta tabla extraemos el producto, agrupándolo independientemente del proveedor. También obtenemos su descripción, el stock disponible y su precio.
+
+- 
