@@ -114,8 +114,10 @@ Vista vista_compras_detalladas
 
 Descripción:
 Esta vista permite visualizar de manera estructurada y exhaustiva cada compra registrada en nuestra base de datos. Presenta información clave como la fecha de la operación, los productos adquiridos, los datos del proveedor, la forma de contacto y otros detalles relevantes. Su diseño busca no solo facilitar el análisis técnico, sino también ofrecer una herramienta didáctica que ejemplifica cómo integrar múltiples fuentes de información en un modelo relacional coherente y funcional.
+
 Objetivo:
 Brindar una visualización clara y eficiente de cada operación de compra, permitiendo identificar con rapidez qué productos se adquirieron, en qué fecha, en qué cantidad, a qué precio y a qué proveedor fueron comprados. Esta vista facilita el seguimiento de decisiones comerciales y ejemplifica cómo estructurar consultas orientadas al análisis estratégico dentro de un entorno relacional.
+
 Tablas que componen la vista:
 - compras: identificamos la operación.
 - compra_producto: identifocamos que es lo que compramos, que cantidad y que precio tenia por unidad.
@@ -125,8 +127,10 @@ Vista vista_productos_agrupado
 
 Descripción:
 Esta vista permite visualizar los productos disponibles en nuestro sistema, incluyendo su descripción, costo y nivel de existencia actual. La información se presenta de forma independiente del proveedor, ya que un mismo producto puede estar asociado a múltiples proveedores. Este diseño facilita el análisis de stock y costos desde una perspectiva centralizada, ejemplificando cómo abstraer entidades clave en un modelo relacional sin perder flexibilidad operativa
+
 Objetivo:
 Centralizar la información de productos disponibles, permitiendo conocer su descripción, existencia y costo, independientemente del proveedor asociado.
+
 Tabla que la compone:
 - producto: de esta tabla extraemos el producto, agrupándolo independientemente del proveedor. También obtenemos su descripción, el stock disponible y su precio.
 
